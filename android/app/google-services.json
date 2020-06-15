@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "550663401591",
+    "firebase_url": "https://ungkiddy.firebaseio.com",
+    "project_id": "ungkiddy",
+    "storage_bucket": "ungkiddy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550663401591:android:43c5aafec1b821e41f9672",
+        "android_client_info": {
+          "package_name": "com.flutterthailand.ungkiddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550663401591-nku2hbmbidc7o6q2qtr0oblvjkcfcdvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrpuQWUfzJXCsicWSOBsaH0EyOqrTdoT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550663401591-nku2hbmbidc7o6q2qtr0oblvjkcfcdvf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "550663401591-30skmgvksijt7cptng4c31333gf0cv2i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterthailand.ungkiddy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

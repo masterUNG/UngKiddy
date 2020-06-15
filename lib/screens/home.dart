@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ungkiddy/widget/information.dart';
+import 'package:ungkiddy/widget/list_product.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -6,9 +8,23 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  // Explicit
+  Widget currentWidget;
+  String title;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    currentWidget = ListProduct();
+    title = 'List Product';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: currentWidget,
       drawer: Drawer(
         child: Column(
           children: <Widget>[
@@ -19,12 +35,19 @@ class _HomeState extends State<Home> {
         ),
       ),
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text(title),
       ),
     );
   }
 
   ListTile homeMenu() => ListTile(
+        onTap: () {
+          Navigator.pop(context);
+          setState(() {
+            currentWidget = ListProduct();
+            title = 'List Product';
+          });
+        },
         leading: Icon(
           Icons.account_balance,
           size: 36.0,
@@ -41,13 +64,20 @@ class _HomeState extends State<Home> {
       );
 
   ListTile infoMenu() => ListTile(
+        onTap: () {
+          Navigator.pop(context);
+          setState(() {
+            currentWidget = Information();
+            title = 'Information';
+          });
+        },
         leading: Icon(
           Icons.info,
           size: 36.0,
           color: Colors.amber.shade800,
         ),
         title: Text(
-          'ราละเอียด',
+          'รายละเอียด',
           style: TextStyle(
             fontSize: 18.0,
             fontWeight: FontWeight.bold,
